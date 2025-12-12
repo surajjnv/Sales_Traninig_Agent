@@ -33,6 +33,7 @@ class SpeechToTextService:
                 encoding=RecognitionConfig.AudioEncoding.LINEAR16,
                 sample_rate_hertz=settings.SAMPLE_RATE_HERTZ,
                 language_code=settings.LANGUAGE_CODE,
+                alternative_language_codes=settings.ALTERNATIVE_LANGUAGE_CODES,
                 enable_automatic_punctuation=True,
             ),
             interim_results=True,

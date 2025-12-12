@@ -1,4 +1,5 @@
 import os
+from typing import List
 from pydantic_settings import BaseSettings
 from dotenv import load_dotenv
 
@@ -27,11 +28,13 @@ class Settings(BaseSettings):
     # Sample rate of the audio from the client
     SAMPLE_RATE_HERTZ: int = 16000
     # BCP-47 language code for STT
-    LANGUAGE_CODE: str = 'en-US'
+    LANGUAGE_CODE: str = 'en-IN'
+    # Alternative language codes for STT
+    ALTERNATIVE_LANGUAGE_CODES: List[str] = ['hi-IN']
 
     # Google TTS Configuration
-    # Voice name for the TTS response
-    TTS_VOICE_NAME: str = 'en-US-Wavenet-D'
+    # Voice name for the TTS response (Male, Indian English)
+    TTS_VOICE_NAME: str = 'en-IN-Wavenet-B'
     # TTS Audio encoding
     TTS_AUDIO_ENCODING: str = 'MP3'
 
